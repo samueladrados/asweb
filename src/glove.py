@@ -7,7 +7,7 @@ Created on Sat Feb  4 16:12:52 2023
 Based on the Source Code of Gauthier, J. (2019). glove.py [Software]. En hans/glove.py. https://github.com/hans/glove.py
 """
 import itertools
-import word_embeddings
+from src import word_embeddings
 import numpy as np
 
 from scipy import sparse

@@ -5,7 +5,8 @@ Created on Sat May  6 19:01:40 2023
 @author: Samuel
 """
 import gensim
-import word_embeddings
+from src import word_embeddings
+
 class Word2vec(word_embeddings.WordEmbeddings):
     
     def __init__(self, corpus, vector_size=100, window_size=10, min_count=2):

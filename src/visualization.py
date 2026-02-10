@@ -6,7 +6,7 @@ Created on Sun Jun  4 21:02:32 2023
 """
 from sklearn.decomposition import PCA
 import numpy as np
-import measurements
+from src import measurements
 
 '''
 Code based on: Rathore, A., Dev, S., Phillips, J. M., Srikumar, V., Zheng, Y., Yeh, C.-C. M., … Wang, B. (2021). 

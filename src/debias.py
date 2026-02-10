@@ -6,12 +6,12 @@ Created on Sat Jan 28 20:14:12 2023
 """
 
 import numpy as np
-import measurements
+from src import measurements
 import torch
 import time
 import random 
 import scipy
-import gender_direction_search
+from src import gender_direction_search
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 

@@ -4,20 +4,23 @@ Created on Tue May  9 05:48:42 2023
 
 @author: Samuel
 """
-
-import glove
-import word2vec
-import debias
-import files
-import gender_direction_search
-import measurements
-import word_embeddings
-import visualization
+import sys
 import os
 import random
 import string
-
 from flask import Flask, render_template, request, jsonify
+from src import glove
+from src import word2vec
+from src import debias
+from src import files
+from src import gender_direction_search
+from src import measurements
+from src import word_embeddings
+from src import visualization
+
+
+
+
 
 
 
@@ -132,7 +135,8 @@ def hard():
             aux.append([aux2[0], aux2[1]])
     gender_specific_words=aux
     if not gender_specific_words:
-        return
+        print("Error: No gender specific words found")
+        return jsonify({"error": "No gender specific words found"}), 400
     
     female_words=[item[1] for item in gender_specific_words]
     male_words=[item[0] for item in gender_specific_words]
@@ -145,7 +149,8 @@ def hard():
             aux.append(word)
     gender_neutral_words=aux
     if not gender_neutral_words:
-        return
+        print("Error: No gender neutral words found")
+        return jsonify({"error": "No gender neutral words found"}), 400
     
     if request.json['gender_direction'] == 'pca':
         pairs=request.json['pairs']
@@ -157,7 +162,8 @@ def hard():
                 aux.append([aux2[0], aux2[1]])
         pairs=aux
         if not pairs:
-            return
+            print("Error: No gender pairs found")
+            return jsonify({"error": "No gender pairs found"}), 400
         
         gender_direction=gender_direction_search.PCA_pairs(word_embedding.we, pairs)
              
