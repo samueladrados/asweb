@@ -67,9 +67,10 @@ asweb/
 │   ├── 📂 templates/
 │   │   └── 🌐 index.html             # Main dashboard template
 │   └── 🐍 main.py                    # Flask entry point
+├── 📜 LICENSE                        # MIT License terms (Legal protection)
 ├── 📝 README.md                      # Project documentation
 ├── ⚙️ requirements.txt               # Dependencies
-└── ⚙️ setup.py                       # Install script
+└── 🐍 setup.py                       # Install script
 ```
 
 ## 🛠️ Installation & Usage
@@ -124,3 +125,6 @@ If you use this toolkit in your research, please cite the original thesis:
   address={Salamanca, Spain},
   note={Supervisors: Vivian F{\'e}lix L{\'o}pez Batista and Gabriel Villarrubia Gonz{\'a}lez}
 }
+
+## 📜 License
+This project is licensed under the MIT License - see the `LICENSE` file for details.
